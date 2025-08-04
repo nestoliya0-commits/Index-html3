@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Panel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+    h2 {
+      color: #facc15;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      margin-top: 25px;
+      padding: 10px 25px;
+      background-color: #22c55e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #16a34a;
+    }
+  </style>
+</head>
+<body>
+  <h2>Admin Panel - Trollking Website</h2>
+
+  <label>Contract Address:</label>
+  <input type="text" id="contract" />
+
+  <label>Twitter Link:</label>
+  <input type="text" id="twitter" />
+
+  <label>Dexscanner Link:</label>
+  <input type="text" id="dex" />
+
+  <label>Phone Link:</label>
+  <input type="text" id="phone" />
+
+  <button onclick="updateSheet()">Update Sheet</button>
+
+  <script>
+    const sheetID = "1F2t2fzAYGLJdf3EiHAJin7uYsq9bRlHzDmMA5B7i15s";
+    const sheetName = "Sheet1"; // Make sure your sheet name is Sheet1
+
+    const apiBase = `https://sheetdb.io/api/v1/`;
+    const sheetdbID = "sclm3te8rl1q5"; // Replace with your actual SheetDB.io ID (you get this from SheetDB.io)
+
+    // Fetch current data
+    fetch(`https://sheetdb.io/api/v1/${sheetdbID}`)
+      .then(res => res.json())
+      .then(data => {
+        if (data.length > 0) {
+          document.getElementById('contract').value = data[0].contract;
+          document.getElementById('twitter').value = data[0].twitter;
+          document.getElementById('dex').value = data[0].dex;
+          document.getElementById('phone').value = data[0].phone;
+        }
+      });
+
+    // Update Sheet function
+    function updateSheet() {
+      const body = {
+        data: [{
+          contract: document.getElementById('contract').value,
+          twitter: document.getElementById('twitter').value,
+          dex: document.getElementById('dex').value,
+          phone: document.getElementById('phone').value
+        }]
+      };
+
+      fetch(`https://sheetdb.io/api/v1/${sheetdbID}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body)
+      })
+        .then(res => res.json())
+        .then(data => {
+          alert("Data updated successfully!");
+        });
+    }
+  </script>
+</body>
+</html>

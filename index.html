@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>$trollking</title>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background: black;
+      color: white;
+      font-family: 'Black Ops One', cursive;
+    }
+    .bg-image {
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      opacity: 0.8;
+      filter: brightness(80%);
+      animation: floatUp 30s linear infinite;
+      pointer-events: none;
+    }
+    @keyframes floatUp {
+      0% { transform: translateY(100vh) rotate(0deg); }
+      100% { transform: translateY(-120vh) rotate(1440deg); }
+    }
+    .bg-holder {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      overflow: hidden;
+      z-index: -2;
+    }
+    .main-wrapper {
+      position: relative;
+      z-index: 1;
+      padding-bottom: 100px;
+    }
+    .title-box {
+      font-size: 2.2rem;
+      text-align: center;
+      margin: 40px auto 10px;
+      color: #fff200;
+      text-shadow: 3px 3px 0 #000, 0 0 15px #ff0000, 0 0 25px #fff200;
+      letter-spacing: 3px;
+    }
+    .contract-box {
+      max-width: 500px;
+      margin: 10px auto;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid yellow;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+    .troll-img {
+      display: block;
+      margin: 10px auto;
+      width: 260px;
+      border-radius: 30px;
+      filter: drop-shadow(0 0 35px yellow) brightness(1.1) contrast(1.2);
+    }
+    .buy-btn {
+      display: block;
+      margin: 20px auto 10px;
+      padding: 12px 30px;
+      background-color: #00ff00;
+      color: black;
+      font-size: 1.5rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+    .x-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 5px auto 30px;
+      max-width: 600px;
+    }
+    .x-row img {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #ff0;
+      transition: transform 0.3s ease;
+    }
+    .x-row img:hover {
+      transform: scale(1.1);
+    }
+    .separator {
+      color: #ffff00;
+      font-size: 1.3rem;
+      padding: 0 6px;
+    }
+    .section {
+      padding: 20px;
+      max-width: 700px;
+      margin: 30px auto;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 20px;
+      border: 2px solid yellow;
+    }
+    h2 {
+      text-align: center;
+      color: #ffff00;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin: 10px 0;
+    }
+    .img-box {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px dashed yellow;
+      border-radius: 20px;
+      text-align: center;
+    }
+    .img-box img {
+      width: 90%;
+      border-radius: 20px;
+      box-shadow: 0 0 25px #ff0;
+    }
+    .img-box h3 {
+      margin-bottom: 10px;
+      color: #ffcc00;
+      font-size: 1.3rem;
+      text-shadow: 1px 1px 2px #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-holder" id="bg"></div>
+  <div class="main-wrapper">
+    <div class="title-box">$TROLLKING</div>
+    <div class="contract-box">
+      CONTRACT ADDRESS:<br />
+      <span id="contract-address">Coming Soon...</span>
+    </div>
+    <img class="troll-img" src="https://i.imgur.com/ZB5x2Tk.png" alt="Troll King" />
+    
+    <button class="buy-btn">BUY NOW</button>
+
+    <!-- 🌟 LINKED IMAGES START -->
+    <div class="x-row">
+      <a href="https://pump.fun/board" target="_blank">
+        <img src="https://i.ibb.co/FqjXjhGh/images-1-removebg-preview.png" alt="Pump Fun" />
+      </a>
+      <span class="separator">. . .</span>
+      <a href="https://dexscreener.com/" target="_blank">
+        <img src="https://i.ibb.co/QjzXNwHd/l-C0xk-PJZ-400x400-removebg-preview.png" alt="Dex Screener" />
+      </a>
+      <span class="separator">. . .</span>
+      <img src="https://i.ibb.co/WpzCpSFW/images-removebg-preview.png" alt="Design" />
+    </div>
+    <!-- 🌟 LINKED IMAGES END -->
+
+    <div class="section">
+      <h2>ROADMAP</h2>
+      <ul>
+        <li>Launch and Meme Storm</li>
+        <li>Viral Twitter Campaign</li>
+        <li>Listing on Pump.fun</li>
+        <li>Community Contest & Giveaways</li>
+        <li>NFT + AI Troll Bots</li>
+        <li>TROLL DOMINATION</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>TOKEN INFO</h2>
+      <ul>
+        <li>Ticker: $trollking</li>
+        <li>Total Supply: 1,000,000,000</li>
+        <li>Chain: Solana</li>
+        <li>Liquidity Locked</li>
+        <li>Community Owned</li>
+        <li>100% Fair Launch</li>
+      </ul>
+    </div>
+
+    <!-- Optional troll meme images below -->
+    <div class="img-box"><h3>Golden Rage</h3><img src="https://i.imgur.com/1d6ahbV.png" /></div>
+    <div class="img-box"><h3>Meme Mafia</h3><img src="https://i.imgur.com/36thV72.png" /></div>
+    <div class="img-box"><h3>Troll Vision</h3><img src="https://i.imgur.com/OTnEK1e.png" /></div>
+    <div class="img-box"><h3>The Crowned One</h3><img src="https://i.imgur.com/HBWyLZ9.png" /></div>
+    <div class="img-box"><h3>Dark Troll Lord</h3><img src="https://i.imgur.com/zeyUnqb.png" /></div>
+    <div class="img-box"><h3>Chaos Bringer</h3><img src="https://i.imgur.com/fsczyCI.png" /></div>
+    <div class="img-box"><h3>Crypto Clown</h3><img src="https://i.imgur.com/x9upJzs.png" /></div>
+    <div class="img-box"><h3>Troll Signal</h3><img src="https://i.imgur.com/A9Blur6.png" /></div>
+    <div class="img-box"><h3>Meme Uprising</h3><img src="https://i.imgur.com/7BTY34W.png" /></div>
+    <div class="img-box"><h3>Final Boss</h3><img src="https://i.imgur.com/3KvvrqQ.png" /></div>
+  </div>
+
+  <script>
+    const bg = document.getElementById("bg");
+    const images = [
+      "https://i.imgur.com/CSzmdxS.png",
+      "https://i.imgur.com/JsfVm7o.png",
+      "https://i.imgur.com/RUwvoRM.png",
+      "https://i.imgur.com/gibXTHJ.png",
+      "https://i.imgur.com/RxoG1IH.png",
+      "https://i.imgur.com/H4S12b9.png",
+      "https://i.imgur.com/ygKoUcT.png",
+      "https://i.imgur.com/1LhG31m.png",
+      "https://i.imgur.com/bGnHT2i.png",
+      "https://i.imgur.com/th2ixC0.png"
+    ];
+    const totalImages = 150;
+    for (let i = 0; i < totalImages; i++) {
+      const img = document.createElement("img");
+      img.src = images[i % images.length];
+      img.className = "bg-image";
+      img.style.left = Math.random() * 100 + "vw";
+      img.style.top = Math.random() * 100 + "vh";
+      img.style.animationDelay = (Math.random() * 30) + "s";
+      bg.appendChild(img);
+    }
+  </script>
+</body>
+</html>
